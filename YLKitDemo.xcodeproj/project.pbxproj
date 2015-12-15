@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0ACB881EF87F85336D9E27E6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 418DCA27F20EB94EDC303A26 /* libPods.a */; };
 		C46DD2451C1FB4DC00914009 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C46DD2441C1FB4DC00914009 /* main.m */; };
 		C46DD2481C1FB4DC00914009 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C46DD2471C1FB4DC00914009 /* AppDelegate.m */; };
 		C46DD24B1C1FB4DC00914009 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C46DD24A1C1FB4DC00914009 /* ViewController.m */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		418DCA27F20EB94EDC303A26 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5560EEB237B4416552EA2AC2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		C31B8518D053B387DDCAC11D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		C46DD2401C1FB4DC00914009 /* YLKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YLKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C46DD2441C1FB4DC00914009 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C46DD2461C1FB4DC00914009 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -33,17 +37,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ACB881EF87F85336D9E27E6 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F938DA7DAA13E3F317A442B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				418DCA27F20EB94EDC303A26 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C46DD2371C1FB4DC00914009 = {
 			isa = PBXGroup;
 			children = (
 				C46DD2421C1FB4DC00914009 /* YLKitDemo */,
 				C46DD2411C1FB4DC00914009 /* Products */,
+				D56013A73912C9B77E572423 /* Pods */,
+				3F938DA7DAA13E3F317A442B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,6 +102,15 @@
 			path = YLKit;
 			sourceTree = "<group>";
 		};
+		D56013A73912C9B77E572423 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C31B8518D053B387DDCAC11D /* Pods.debug.xcconfig */,
+				5560EEB237B4416552EA2AC2 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -94,9 +118,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C46DD2571C1FB4DC00914009 /* Build configuration list for PBXNativeTarget "YLKitDemo" */;
 			buildPhases = (
+				A6181906EF0D6372257E202A /* Check Pods Manifest.lock */,
 				C46DD23C1C1FB4DC00914009 /* Sources */,
 				C46DD23D1C1FB4DC00914009 /* Frameworks */,
 				C46DD23E1C1FB4DC00914009 /* Resources */,
+				EF91B2A8F046D41A05996251 /* Embed Pods Frameworks */,
+				E0060D33B440A9B1153EDCEA /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -151,6 +178,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A6181906EF0D6372257E202A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E0060D33B440A9B1153EDCEA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF91B2A8F046D41A05996251 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C46DD23C1C1FB4DC00914009 /* Sources */ = {
@@ -267,6 +342,7 @@
 		};
 		C46DD2581C1FB4DC00914009 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C31B8518D053B387DDCAC11D /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = YLKitDemo/Info.plist;
@@ -278,6 +354,7 @@
 		};
 		C46DD2591C1FB4DC00914009 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5560EEB237B4416552EA2AC2 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = YLKitDemo/Info.plist;
@@ -306,6 +383,7 @@
 				C46DD2591C1FB4DC00914009 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
