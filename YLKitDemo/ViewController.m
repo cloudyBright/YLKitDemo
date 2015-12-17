@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "UIView+YLAdd.h"
 
 @interface ViewController ()
 
@@ -17,6 +18,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    [self.view addGradientWithColors:@[[UIColor redColor], [UIColor blueColor]] startPoint:CGPointMake(0, 0) endPoint:CGPointMake(1, 1)];
+    
 }
 
 - (void)didReceiveMemoryWarning {

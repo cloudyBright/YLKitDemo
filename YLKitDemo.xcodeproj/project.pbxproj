@@ -14,6 +14,7 @@
 		C46DD24E1C1FB4DC00914009 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C46DD24C1C1FB4DC00914009 /* Main.storyboard */; };
 		C46DD2501C1FB4DC00914009 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C46DD24F1C1FB4DC00914009 /* Assets.xcassets */; };
 		C46DD2531C1FB4DC00914009 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C46DD2511C1FB4DC00914009 /* LaunchScreen.storyboard */; };
+		C4F6790C1C22945500DF9D68 /* UIView+YLAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F6790B1C22945500DF9D68 /* UIView+YLAdd.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,8 @@
 		C46DD24F1C1FB4DC00914009 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C46DD2521C1FB4DC00914009 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C46DD2541C1FB4DC00914009 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4F6790A1C22945500DF9D68 /* UIView+YLAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YLAdd.h"; sourceTree = "<group>"; };
+		C4F6790B1C22945500DF9D68 /* UIView+YLAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YLAdd.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +101,8 @@
 		C46DD25A1C1FB53100914009 /* YLKit */ = {
 			isa = PBXGroup;
 			children = (
+				C4F6790A1C22945500DF9D68 /* UIView+YLAdd.h */,
+				C4F6790B1C22945500DF9D68 /* UIView+YLAdd.m */,
 			);
 			path = YLKit;
 			sourceTree = "<group>";
@@ -235,6 +240,7 @@
 				C46DD24B1C1FB4DC00914009 /* ViewController.m in Sources */,
 				C46DD2481C1FB4DC00914009 /* AppDelegate.m in Sources */,
 				C46DD2451C1FB4DC00914009 /* main.m in Sources */,
+				C4F6790C1C22945500DF9D68 /* UIView+YLAdd.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +352,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = YLKitDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ky.YLKitDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -358,6 +365,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = YLKitDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ky.YLKitDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
